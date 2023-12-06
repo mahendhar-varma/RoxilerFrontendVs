@@ -37,7 +37,6 @@ class Home extends Component {
     pageNo: 1,
     search: "",
     selectValue: monthsList[2],
-    month: 3,
     tableDataList: [],
     statsData: {},
     barChartList: [],
@@ -106,13 +105,12 @@ class Home extends Component {
   getRequiredData = async () => {
     const { search, pageNo, selectValue } = this.state;
     const month = this.getMonth(selectValue);
-    console.log(month);
 
     const apiUrl = `https://rolixerapp.onrender.com/home/?month=${month}&search=${search}&page_no=${pageNo}`;
 
     try {
       const responseData = await axios.get(apiUrl);
-      this.setState({ tableDataList: responseData.data });
+      this.setState({ tableDataList: responseData.data, hasResponseRecieved: true });
     } catch (error) {
       console.log(error.response);
     }
@@ -175,6 +173,7 @@ class Home extends Component {
       tableDataList,
     } = this.state;
     const { totalPrice, totalNotSoldItems, totalSoldItems } = statsData;
+    console.log(barChartList)
 
     const check = tableDataList.length !== 0;
     const checkBarChart = barChartList.length !== 0;
@@ -228,24 +227,21 @@ class Home extends Component {
               <li className="tableText">Price</li>
               <li className="tableText">Category</li>
               <li className="tableText">Sold</li>
-              <li className="tableText">Image</li>
+              <li className="tableText forBorderNone">Image</li>
             </ul>
             <ul className="tableRow">
               {check ? (
-                tableDataList.map((item) => (
-                  <>
+                tableDataList.map((item) => ( 
                     <TableItem data={item} key={item.id} />
-                    <hr className="line" />
-                  </>
                 ))
               ) : (
-                <div className="">
+                <div className="loader-container">
                   <ThreeDots
-                    height="80"
-                    width="80"
+                    height="30"
+                    width="30"
                     radius="9"
                     color="green"
-                    ariaLabel="loading"
+                    
                   />
                 </div>
               )}
@@ -254,7 +250,7 @@ class Home extends Component {
 
           <div className="responseChangeContainer">
             <p className="text">Page: {pageNo}</p>
-            <>
+            <div className="responseChangeContainer btnContainer">
               <button
                 type="button"
                 className="searchButton btn text"
@@ -270,7 +266,7 @@ class Home extends Component {
               >
                 Previous
               </button>
-            </>
+            </div>
             <p className="text">Per Page: 10</p>
           </div>
         </div>
@@ -280,48 +276,17 @@ class Home extends Component {
             <div className="statsDataContainer">
               <div className="labelContainer">
                 <p className="statText">Total Sale: </p>
-                <p className="statText">{totalPrice}</p>
+                <p className="statText stats">{totalPrice}</p>
               </div>
               <div className="labelContainer">
                 <p className="statText">Total Sold Item: </p>
-                <p className="statText">{totalSoldItems}</p>
+                <p className="statText stats">{totalSoldItems}</p>
               </div>
               <div className="labelContainer">
                 <p className="statText">Total not Sold Item: </p>
-                <p className="statText">{totalNotSoldItems}</p>
+                <p className="statText stats">{totalNotSoldItems}</p>
               </div>
             </div>
-          </div>
-          <div className="statsContainer">
-            <h1 className="head">Bar Chart Stats - {selectValue}</h1>
-            {checkBarChart ? (
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={barChartList} margin={{ top: 5 }}>
-                  <XAxis
-                    dataKey="priceRange"
-                    tick={{ stroke: "gray", strokewidth: 1 }}
-                  />
-                  <YAxis tick={{ stroke: "gray", strokewidth: 0 }} />
-                  <Legend wrapperStyle={{ padding: 20 }} />
-                  <Bar
-                    dataKey="totalPriceRangeItems"
-                    name="Price range"
-                    fill="#1f77b4"
-                    barSize="15%"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="">
-                <ThreeDots
-                  height="80"
-                  width="80"
-                  radius="9"
-                  color="green"
-                  ariaLabel="loading"
-                />
-              </div>
-            )}
           </div>
           <div className="statsContainer">
             <h1 className="head">Pie Chart Stats - {selectValue}</h1>
@@ -355,10 +320,10 @@ class Home extends Component {
                 </PieChart>
               </ResponsiveContainer>
             ) : (
-              <div className="">
+              <div className="loader-container">
                 <ThreeDots
-                  height="80"
-                  width="80"
+                  height="30"
+                  width="30"
                   radius="9"
                   color="green"
                   ariaLabel="loading"
@@ -367,7 +332,40 @@ class Home extends Component {
             )}
           </div>
         </div>
-      </div>
+        <div className="barchartContainer statsContainer">
+            
+            <h1 className="head">Bar Chart Stats - {selectValue}</h1>
+            {checkBarChart ? (
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={barChartList} margin={{ top: 5 }}>
+                  <XAxis
+                    dataKey="priceRange"
+                    tick={{ stroke: "gray", strokewidth: 1 }}
+                    ariaLabel={{fontSize: 10}}
+                  />
+                  <YAxis tick={{ stroke: "gray", strokewidth: 0 }} />
+                  <Legend wrapperStyle={{ padding: 10 }} />
+                  <Bar
+                    dataKey="totalPriceRangeItems"
+                    name="Price range"
+                    fill={colorGenerator()}
+                    barSize="10%"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            ) : (
+              <div className="loader-container">
+                <ThreeDots
+                  height="30"
+                  width="30"
+                  radius="9"
+                  color="green"
+                  ariaLabel="loading"
+                />
+              </div>
+            )}
+            </div>
+         </div>
     );
   }
 }

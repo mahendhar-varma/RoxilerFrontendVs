@@ -19,7 +19,7 @@ const TableItem = (props) => {
       <li className="tableText">{price}</li>
       <li className="tableText">{category}</li>
       <li className="tableText">{sold}</li>
-      <li className="tableText">
+      <li className="tableText forBorderNone">
         <img src={image} alt="product" className="image" />
       </li>
     </>

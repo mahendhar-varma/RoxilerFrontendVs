@@ -3,6 +3,7 @@
     padding: 10px;
     width: 80px;
     border-right: 1px solid #aeaeae;
+    border-bottom: 1px solid #aeaeae;
   }
   
   .image {
@@ -17,4 +18,8 @@
   .texts {
     width: 492px;
   }
+
   
+  .forBorderNone{
+    border-right: none;
+  }

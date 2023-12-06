@@ -19,7 +19,7 @@
   
   .title {
     font-weight: bold;
-    color: darkslategrey;
+    color: brown;
   }
   
   .responseChangeContainer {
@@ -76,7 +76,8 @@
   }
   
   .tableRow {
-    padding-left: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
     list-style-type: none;
     margin: 0px;
     display: flex;
@@ -124,6 +125,7 @@
   .text {
     font-size: 20px;
     color: darkgray;
+    font-weight: bold;
   }
   
   .statsContainer {
@@ -154,12 +156,42 @@
   }
   
   .statText {
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   .mainStatsContainer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+  }
+
+  .barchartContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 150px;
   }
   
+  .loader-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .forBorderNone{
+    border: none;
+  }
+
+  .btnContainer{
+    width: 130px;
+    margin: 0px;
+  }
+
+  .stats{
+    color: brown;
+    font-weight: 600;
+  }
