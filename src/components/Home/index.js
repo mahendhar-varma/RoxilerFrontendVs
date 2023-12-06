@@ -248,7 +248,7 @@ class Home extends Component {
             </ul>
           </div>
 
-          <div className="responseChangeContainer">
+          <div className="responseChangeContainer smallDevicesContainer">
             <p className="text">Page: {pageNo}</p>
             <div className="responseChangeContainer btnContainer">
               <button
@@ -258,7 +258,6 @@ class Home extends Component {
               >
                 Next
               </button>
-              <p>-</p>
               <button
                 type="button"
                 className="searchButton btn text"
@@ -267,7 +266,7 @@ class Home extends Component {
                 Previous
               </button>
             </div>
-            <p className="text">Per Page: 10</p>
+            <p className="text smallDevicesText">Per Page: 10</p>
           </div>
         </div>
         <div className="mainStatsContainer">

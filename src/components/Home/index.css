@@ -4,6 +4,12 @@
     padding: 45px;
     background-color: aliceblue;
   }
+
+  @media screen and (max-width:560px){
+    .mainContainer{
+      padding-left: 25px;
+    }
+  }
   
   .titleContainer {
     background-color: white;
@@ -15,6 +21,13 @@
     padding-top: 20px;
     padding-left: 5px;
     margin: 30px;
+  }
+
+  @media  screen and (max-width:560px) {
+    .titleContainer{
+      margin: 20px;
+    }
+    
   }
   
   .title {
@@ -184,6 +197,7 @@
   @media screen and (max-width: 560px){
     .text{
       font-size: 14px;
+      margin-right: 10px;
     }
   }
 
@@ -192,10 +206,34 @@
     margin: 0px;
   }
 
+  @media screen and (max-width: 560px){
+    .btnContainer{
+      margin-top: -8px;
+      justify-content: flex-start;
+    }
+
+    .smallDevicesContainer{
+      justify-content: flex-start;
+
+    }
+
+    .smallDevicesText{
+      display: none;
+    }
+  }
+
+
+
   .mainStatsContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 560px){
+    .mainStatsContainer{
+      flex-direction: column;
+    }
   }
   
   .statsContainer {
@@ -207,9 +245,21 @@
     margin-right: 20px;
     padding: 15px;
   }
+
+  @media screen and (max-width: 560px){
+    .statsContainer{
+      width: 100%;
+    }
+  }
   
   .head {
     font-size: 18px;
+  }
+
+  @media screen and (max-width:560px){
+    .head{
+      font-size: 14px;
+    }
   }
   
   .statsDataContainer {
@@ -218,6 +268,12 @@
     border-radius: 12px;
     width: 300px;
     margin-top: 30px;
+  }
+
+  @media screen and (max-width: 560px) {
+    .statsDataContainer{
+      width: 90%;
+    }
   }
   
   .labelContainer {
@@ -243,6 +299,13 @@
     flex-direction: column;
     width: 70%;
     margin-left: 150px;
+  }
+
+  @media screen and (max-width: 560px){
+    .barchartContainer{
+      margin-left:0px;
+      width: 100%;
+    }
   }
   
   .loader-container{
