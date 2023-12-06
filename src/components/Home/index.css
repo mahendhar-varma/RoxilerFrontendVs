@@ -1,0 +1,165 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    background-color: aliceblue;
+  }
+  
+  .titleContainer {
+    background-color: white;
+    height: 100px;
+    border-radius: 80px;
+    width: 150px;
+    align-self: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 5px;
+    margin: 30px;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: darkslategrey;
+  }
+  
+  .responseChangeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .form {
+    background-color: orange;
+    border-radius: 12px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+  }
+  
+  .inputElement {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+  }
+  
+  .searchButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .searchIcon {
+    width: 25px;
+    height: 25px;
+    margin-top: 6px;
+  }
+  
+  .selectElement {
+    background-color: orange;
+    padding: 8px;
+    border-radius: 12px;
+    width: 123px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .table {
+    border: solid 1px #aeaeae;
+    border-radius: 12px;
+  }
+  
+  .tableRow {
+    padding-left: 12px;
+    list-style-type: none;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .tableHeadRow {
+    border-bottom: 1px solid #aeaeae;
+    background-color: brown;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .tableText {
+    text-align: left;
+    padding: 10px;
+    width: 80px;
+    border-right: 1px solid #aeaeae;
+  }
+  
+  .tableTitle {
+    width: 123px;
+    text-align: left;
+    padding: 10px;
+    border-right: 1px solid #aeaeae;
+  }
+  
+  .tableDescription {
+    width: 492px;
+    text-align: left;
+    padding: 10px;
+    border-right: 1px solid #aeaeae;
+  }
+  
+  .line {
+    border: 1px;
+    color: #aeaeae;
+  }
+  
+  .btn {
+    margin-top: 18px;
+  }
+  
+  .text {
+    font-size: 20px;
+    color: darkgray;
+  }
+  
+  .statsContainer {
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px 0px #aeaeae;
+    width: 30%;
+    margin-right: 20px;
+    padding: 15px;
+  }
+  
+  .head {
+    font-size: 18px;
+  }
+  
+  .statsDataContainer {
+    background-color: orange;
+    padding: 15px;
+    border-radius: 12px;
+    width: 300px;
+    margin-top: 30px;
+  }
+  
+  .labelContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .statText {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  .mainStatsContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
