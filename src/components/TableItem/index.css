@@ -11,10 +11,24 @@
       width:61px;
     }
   }
+
+  @media screen and (max-width: 412px) {
+    .tableText{
+      width:8%;
+      font-size: 12px;
+    }
+  }
   
   .image {
     width: 50px;
     height: 50px;
+  }
+
+  @media screen and (max-width: 412px) {
+    .image{
+      width: 23px;
+      height: 23px;
+    }
   }
   
   .titleText {
@@ -26,6 +40,13 @@
       width: 12%;
     }
   }
+
+  @media  screen and (max-width: 412px) {
+    .titleText{
+      width: 12%;
+      font-size: 12px;
+    }
+  }
   
   .texts {
     width: 492px;
@@ -34,6 +55,13 @@
   @media  screen and (max-width: 768px) {
     .texts{
       width: 20%;
+    }
+  } 
+
+  @media  screen and (max-width: 412px) {
+    .texts{
+      width: 25%;
+      font-size: 12px;
     }
   } 
 

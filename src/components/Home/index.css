@@ -85,6 +85,12 @@
     border: solid 1px #aeaeae;
     border-radius: 12px;
   }
+
+  @media screen and (max-width: 412px){
+    .table{
+      width:200%;
+    }
+  }
   
   .tableRow {
     padding-left: 0px;
@@ -95,6 +101,7 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   
   .tableHeadRow {
     border-bottom: 1px solid #aeaeae;
@@ -115,6 +122,12 @@
       width:61px;
     }
   }
+
+  @media screen and (max-width: 412px) {
+    .tableText{
+      width:8%;
+    }
+  }
   
   .tableTitle {
     width: 123px;
@@ -126,6 +139,13 @@
   @media  screen and (max-width: 768px) {
     .tableTitle{
       width: 12%;
+    }
+  }
+
+  @media  screen and (max-width: 412px) {
+    .tableTitle{
+      width: 12%;
+      font-size: 12px;
     }
   }
   
@@ -141,7 +161,14 @@
   .tableDescription{
     width: 20%;
   }
-}  
+}
+
+@media  screen and (max-width: 412px) {
+  .tableDescription{
+    width: 25%;
+    font-size: 12px;
+  }
+}
 
   
   .btn {
@@ -152,6 +179,12 @@
     font-size: 20px;
     color: darkgray;
     font-weight: bold;
+  }
+
+  @media screen and (max-width: 421px){
+    .text{
+      font-size: 14px;
+    }
   }
 
   .btnContainer{
