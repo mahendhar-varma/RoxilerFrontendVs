@@ -208,7 +208,7 @@
 
   @media screen and (max-width: 560px){
     .btnContainer{
-      margin-top: -8px;
+      margin-top: -9px;
       justify-content: flex-start;
     }
 
@@ -292,7 +292,9 @@
     font-weight: 600;
   }
   
-
+  .responsiveContainer{
+    width: 100vw;
+  }
 
   .barchartContainer{
     display: flex;

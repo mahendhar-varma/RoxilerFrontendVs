@@ -332,10 +332,9 @@ class Home extends Component {
           </div>
         </div>
         <div className="barchartContainer statsContainer">
-            
             <h1 className="head">Bar Chart Stats - {selectValue}</h1>
             {checkBarChart ? (
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%"  height={300}>
                 <BarChart data={barChartList} margin={{ top: 5 }}>
                   <XAxis
                     dataKey="priceRange"
@@ -348,10 +347,11 @@ class Home extends Component {
                     dataKey="totalPriceRangeItems"
                     name="Price range"
                     fill={colorGenerator()}
-                    barSize="10%"
+                    
                   />
                 </BarChart>
               </ResponsiveContainer>
+              
             ) : (
               <div className="loader-container">
                 <ThreeDots
