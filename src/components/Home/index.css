@@ -39,6 +39,17 @@
     flex-direction: row;
     padding: 8px;
   }
+
+  @media screen and (max-width: 768px){
+    .form{
+      width: 120px;
+    }
+
+    .inputElement{
+      width: 80px;
+    }
+    
+  }
   
   .inputElement {
     border: none;
@@ -98,12 +109,24 @@
     width: 80px;
     border-right: 1px solid #aeaeae;
   }
+
+  @media screen and (max-width: 768px) {
+    .tableText{
+      width:61px;
+    }
+  }
   
   .tableTitle {
     width: 123px;
     text-align: left;
     padding: 10px;
     border-right: 1px solid #aeaeae;
+  }
+
+  @media  screen and (max-width: 768px) {
+    .tableTitle{
+      width: 12%;
+    }
   }
   
   .tableDescription {
@@ -112,11 +135,14 @@
     padding: 10px;
     border-right: 1px solid #aeaeae;
   }
-  
-  .line {
-    border: 1px;
-    color: #aeaeae;
+
+
+@media  screen and (max-width: 768px) {
+  .tableDescription{
+    width: 20%;
   }
+}  
+
   
   .btn {
     margin-top: 18px;
@@ -126,6 +152,17 @@
     font-size: 20px;
     color: darkgray;
     font-weight: bold;
+  }
+
+  .btnContainer{
+    width: 130px;
+    margin: 0px;
+  }
+
+  .mainStatsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
   .statsContainer {
@@ -160,12 +197,13 @@
     margin-right: 8px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  
-  .mainStatsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+  .stats{
+    color: brown;
+    font-weight: 600;
   }
+  
+
 
   .barchartContainer{
     display: flex;
@@ -186,12 +224,5 @@
     border: none;
   }
 
-  .btnContainer{
-    width: 130px;
-    margin: 0px;
-  }
 
-  .stats{
-    color: brown;
-    font-weight: 600;
-  }
+

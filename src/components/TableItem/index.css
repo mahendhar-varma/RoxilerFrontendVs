@@ -5,6 +5,12 @@
     border-right: 1px solid #aeaeae;
     border-bottom: 1px solid #aeaeae;
   }
+
+  @media screen  and (max-width: 768px) {
+    .tableText{
+      width:61px;
+    }
+  }
   
   .image {
     width: 50px;
@@ -14,10 +20,22 @@
   .titleText {
     width: 123px;
   }
+
+  @media  screen and (max-width: 768px) {
+    .titleText{
+      width: 12%;
+    }
+  }
   
   .texts {
     width: 492px;
   }
+
+  @media  screen and (max-width: 768px) {
+    .texts{
+      width: 20%;
+    }
+  } 
 
   
   .forBorderNone{
