@@ -86,7 +86,7 @@
     border-radius: 12px;
   }
 
-  @media screen and (max-width: 412px){
+  @media screen and (max-width: 560px){
     .table{
       width:200%;
     }
@@ -123,7 +123,7 @@
     }
   }
 
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 560px) {
     .tableText{
       width:8%;
     }
@@ -142,7 +142,7 @@
     }
   }
 
-  @media  screen and (max-width: 412px) {
+  @media  screen and (max-width: 560px) {
     .tableTitle{
       width: 12%;
       font-size: 12px;
@@ -163,7 +163,7 @@
   }
 }
 
-@media  screen and (max-width: 412px) {
+@media  screen and (max-width: 560px) {
   .tableDescription{
     width: 25%;
     font-size: 12px;
@@ -181,7 +181,7 @@
     font-weight: bold;
   }
 
-  @media screen and (max-width: 421px){
+  @media screen and (max-width: 560px){
     .text{
       font-size: 14px;
     }
