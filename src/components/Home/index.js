@@ -331,26 +331,27 @@ class Home extends Component {
             )}
           </div>
         </div>
-        <div className="barchartContainer statsContainer">
+        <div className="barchartContainer">
             <h1 className="head">Bar Chart Stats - {selectValue}</h1>
             {checkBarChart ? (
-              <ResponsiveContainer width="100%"  height={300}>
+              <div className="responsiveContainer">
+              <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={barChartList} margin={{ top: 5 }}>
                   <XAxis
                     dataKey="priceRange"
-                    tick={{ stroke: "gray", strokewidth: 1 }}
-                    ariaLabel={{fontSize: 10}}
+                    tick={{ stroke: "gray", strokewidth: 1 , fontStretch: -2}}
+                    ariaLabel={{fontSize: "2px"}}
                   />
                   <YAxis tick={{ stroke: "gray", strokewidth: 0 }} />
                   <Legend wrapperStyle={{ padding: 10 }} />
                   <Bar
                     dataKey="totalPriceRangeItems"
                     name="Price range"
-                    fill={colorGenerator()}
-                    
+                    fill={colorGenerator()} 
                   />
                 </BarChart>
               </ResponsiveContainer>
+              </div>
               
             ) : (
               <div className="loader-container">

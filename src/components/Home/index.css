@@ -292,15 +292,17 @@
     font-weight: 600;
   }
   
-  .responsiveContainer{
-    width: 100vw;
-  }
+
 
   .barchartContainer{
-    display: flex;
-    flex-direction: column;
     width: 70%;
     margin-left: 150px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px 0px #aeaeae;
+    margin-right: 20px;
+    padding: 15px;
   }
 
   @media screen and (max-width: 560px){
@@ -310,6 +312,10 @@
     }
   }
   
+  .responsiveContainer{
+    width: 100%;
+  }
+
   .loader-container{
     display: flex;
     flex-direction: row;
